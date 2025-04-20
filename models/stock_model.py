@@ -9,7 +9,7 @@ import scipy.stats as stats
 import matplotlib.pyplot as plt
 torch.set_num_threads(12)
 
-df = pd.read_csv('stock_data_all_10years.csv')
+df = pd.read_csv('stock_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 print(f"Raw data shape: {df.shape}, Date range: {df['Date'].min()} to {df['Date'].max()}")
 
@@ -206,5 +206,5 @@ for name, portfolio in portfolios.items():
 
 # Save to CSV
 df_csv = pd.DataFrame(csv_data)
-df_csv.to_csv('apr_2025_forecast.csv', index=False)
-print("\nSaved to 'apr_2025_forecast.csv'")
+df_csv.to_csv('Stock_LSTM_Forcast.csv', index=False)
+print("\nSaved to 'Stock_LSTM_Forcas.csv'")
